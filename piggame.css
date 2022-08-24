@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/game-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 400;
+    /* height: 100vh; */
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    background-color: rgb(211, 206, 206);
+    width: 1000px;
+    display: flex;
+    margin-top: 50px;
+    overflow: hidden;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* overflow: hidden; */
+    
+}
+/* .container::after {
+    content: "";
+    display: flex;
+    clear: both;
+} */
+
+.player-0-box, 
+.player-1-box {
+    width: 50%;
+    height: 50%;
+    padding: 100px;
+    /* float: left; */
+}
+.player-name {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    /* margin-top: 20px; */
+    margin-bottom: 30px;
+}
+.player-score {
+    font-size: 45px;
+    text-align: center;
+    color: red;
+}
+.player-active {
+    /* background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)); */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.player-active .player-name::after {
+    content: "\2022";
+    color: rgb(243, 54, 54);
+
+}
+.player-active .player-current-box {
+    opacity: .8;
+}
+.player-current-box {
+    background-color: red;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    margin-top: 10rem;
+}
+.player-current {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.player-current-no {
+    font-size: 30px;
+}
+.dice-image {
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    height: 100px;
+}
+button {
+    position: absolute;
+    left: 40%;
+    cursor: pointer;
+    width: 200px;
+    color: #000;
+    text-transform: uppercase;
+    background: none;
+    /* transform: translateX(-50%); */
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    /* top: 128px; */
+}
+button:hover {
+    font-size: 25px;
+}
+.btn-new {
+    top: 50px;
+}
+.btn-roll {
+    bottom: 160px;
+}
+.btn-hold {
+    bottom: 100px;
+}
+.winner {
+    background-color: aqua;
+}
+.winner .player-name {
+    color: red;
+}
+@media screen  and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+
