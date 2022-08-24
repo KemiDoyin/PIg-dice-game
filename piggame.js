@@ -23,7 +23,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gameIsPlaying) {
         scores[activePlayer] += roundScore;
         document.querySelector('#player-score-' + activePlayer).textContent = scores[activePlayer];
-        if (scores[activePlayer] >= 10) {
+        if (scores[activePlayer] >= 100) {
             document.querySelector('#player-name-' + activePlayer).textContent = 'you win!';
             document.querySelector('.dice-image').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-box').classList.add('winner');
